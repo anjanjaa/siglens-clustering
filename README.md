@@ -1,4 +1,4 @@
-# alert-semantic-clustering
+# siglens-clustering
 
 Embedding-based system for grouping and analyzing alerts using semantic similarity.
 
@@ -61,7 +61,7 @@ Given a set of alert messages, the system:
 
 - Text embeddings (OpenAI / sentence-transformers)
 - Cosine similarity for distance calculation
-- Clustering using simple algorithms (e.g. DBSCAN or hierarchical clustering)
+- Clustering using simple algorithms (e.g., DBSCAN or hierarchical clustering)
 
 ---
 
