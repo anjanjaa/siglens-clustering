@@ -20,8 +20,8 @@ alerts → embeddings → clustering → grouped incidents
 
 This repository is part of the SigLens system:
 
-[siglens](https://github.com/anjanjaa/siglens) — interpretation layer (LLM-based analysis)
-siglens-clustering — structural layer (semantic grouping of alerts)
+[siglens](https://github.com/anjanjaa/siglens) — interpretation layer (LLM-based analysis)  
+[siglens-clustering](https://github.com/anjanjaa/siglens-clustering) — structural layer (semantic grouping of alerts)
 
 ---
 
