@@ -1,13 +1,24 @@
 from sklearn.cluster import DBSCAN
-import numpy as np
 
-def cluster_embeddings(embeddings):
-    clustering = DBSCAN(metric="cosine", eps=0.3, min_samples=1)
+
+def cluster_embeddings(embeddings, eps: float = 0.3, min_samples: int = 1):
+    """
+    Cluster embeddings using cosine distance.
+    Returns a dictionary mapping cluster IDs to alert indexes.
+    """
+    clustering = DBSCAN(
+        metric="cosine",
+        eps=eps,
+        min_samples=min_samples,
+    )
+
     labels = clustering.fit_predict(embeddings)
 
     clusters = {}
-    for idx, label in enumerate(labels):
-        clusters.setdefault(f"cluster_{label}", []).append(idx)
+
+    for index, label in enumerate(labels):
+        cluster_id = f"cluster_{label + 1}"
+        clusters.setdefault(cluster_id, []).append(index)
 
     return clusters
-  
+    
