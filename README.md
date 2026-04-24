@@ -1,6 +1,6 @@
 # siglens-clustering
 
-Embedding-based system for grouping and analyzing alerts using semantic similarity.
+SigLens component for grouping alerts into structured incidents via semantic similarity.
 
 ---
 
