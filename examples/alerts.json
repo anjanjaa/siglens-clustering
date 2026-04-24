@@ -1,0 +1,10 @@
+{
+  "alerts": [
+    "High latency detected on gateway-1",
+    "Latency spike on satellite node",
+    "Packet loss increasing on link A",
+    "High latency detected on gateway-2",
+    "Database connection timeout on reporting service",
+    "Reporting database connection failed"
+  ]
+}

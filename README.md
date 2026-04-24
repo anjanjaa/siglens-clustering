@@ -1,6 +1,6 @@
-# alert-semantic-clustering
+# siglens-clustering
 
-Embedding-based system for grouping and analyzing alerts using semantic similarity.
+SigLens component for grouping alerts into structured incidents via semantic similarity.
 
 ---
 
@@ -61,7 +61,7 @@ Given a set of alert messages, the system:
 
 - Text embeddings (OpenAI / sentence-transformers)
 - Cosine similarity for distance calculation
-- Clustering using simple algorithms (e.g. DBSCAN or hierarchical clustering)
+- Clustering using simple algorithms (e.g., DBSCAN or hierarchical clustering)
 
 ---
 
@@ -98,15 +98,16 @@ Minimal working prototype for alert grouping and semantic clustering.
 
 ---
 
-# Core code
+## Run locally
 
-## embed.py
-
-```python
-from sentence_transformers import SentenceTransformer
-
-model = SentenceTransformer("all-MiniLM-L6-v2")
-
-def embed_alerts(alerts):
-    return model.encode(alerts)
+```bash
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 ```
+
+Then open:
+```
+http://127.0.0.1:8000/docs
+```
+
+Use the /cluster endpoint with the example JSON.
